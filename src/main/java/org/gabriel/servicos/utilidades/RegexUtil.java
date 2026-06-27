@@ -1,0 +1,22 @@
+package org.gabriel.servicos.utilidades;
+
+import java.util.regex.Pattern;
+
+public class RegexUtil {
+    public static final Pattern email = Pattern.compile("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$");
+    public static final Pattern senha = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[^A-Za-z0-9]).{8,}$");
+    public static final Pattern cpf = Pattern.compile("^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$");
+
+    public static boolean eEmail(String texto){
+        return RegexUtil.email.matcher(texto).matches();
+
+    }
+    public static boolean eSenhaForte(String texto){
+        return RegexUtil.senha.matcher(texto).matches();
+
+    }
+    public static boolean eCpf(String texto){
+        return RegexUtil.cpf.matcher(texto).matches();
+
+    }
+}
