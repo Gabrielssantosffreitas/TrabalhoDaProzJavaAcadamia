@@ -22,8 +22,8 @@ public class AcessoAdiministradorTela {
 
             switch (opc){
                 case 1 -> CadatroDeAdiministradorParaAdiministradorTela.exibir(scanner);
-                case 2 -> CadatroDeAdiministradorParaAdiministradorTela.exibir(scanner);
-                case 3 -> CadatroDeAdiministradorParaAdiministradorTela.exibir(scanner);
+                case 2 -> ColoresUtil.printRed("Em densenvolvimento");
+                case 3 -> CadastrarAlunoParaAdiministradorTela.exibir(scanner);
                 case 4 -> ClearUtil.LimparTerminal(0);
             }
 

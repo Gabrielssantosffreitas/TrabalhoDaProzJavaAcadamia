@@ -11,7 +11,7 @@ import java.security.NoSuchAlgorithmException;
 
 @AllArgsConstructor
 public class CadastraAdiministradorServico {
-    AdiministradorCRUDRepositorio adiministradorCRUDRepositorio;
+    private  AdiministradorCRUDRepositorio adiministradorCRUDRepositorio;
 
 
     private void cadastrarAdministradorVarificador (AdiministradorModelo adiministradorModelo){
