@@ -17,7 +17,14 @@ public class AcessoAdiministradorTela {
             ColoresUtil.printBlue("1 - Cadastrar novo Adiministrador ");
             ColoresUtil.printCyan("2 - Cadastrar novo Professor");
             ColoresUtil.printBlue("3 - Cadastrar novo Aluno");
-            ColoresUtil.printBlue("4 - Sair");
+            ColoresUtil.printBlue("4 - Listar todos os Alunos");
+            ColoresUtil.printBlue("5 - Listar Aluno por cpf");
+            ColoresUtil.printBlue("6 - Listar todos os Professores");
+            ColoresUtil.printBlue("7 - Listar Professor por cpf");
+            ColoresUtil.printBlue("8 - Listar todos os Adiministradores");
+            ColoresUtil.printBlue("9 - Listar Adiministrador por cpf");
+
+            ColoresUtil.printBlue("10 - Sair");
 
             opc = scanner.nextByte();
             scanner.nextLine();
@@ -29,6 +36,6 @@ public class AcessoAdiministradorTela {
                 case 4 -> ClearUtil.LimparTerminal(0);
             }
 
-        }while (opc!=4);
+        }while (opc!=10);
     }
 }
