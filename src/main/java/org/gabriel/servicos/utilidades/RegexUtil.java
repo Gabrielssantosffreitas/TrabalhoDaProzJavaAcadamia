@@ -5,7 +5,8 @@ import java.util.regex.Pattern;
 public class RegexUtil {
     public static final Pattern email = Pattern.compile("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$");
     public static final Pattern senha = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[^A-Za-z0-9]).{8,}$");
-    public static final Pattern cpf = Pattern.compile("^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$");
+    public static final Pattern cpf = Pattern.compile( "^\\d{11}$");
+    public static final Pattern telefone = Pattern.compile( "^\\d{10,11}$");
 
     public static boolean eEmail(String texto){
         return RegexUtil.email.matcher(texto).matches();
@@ -18,5 +19,8 @@ public class RegexUtil {
     public static boolean eCpf(String texto){
         return RegexUtil.cpf.matcher(texto).matches();
 
+    }
+    public static boolean eTelefone(String texto){
+        return  RegexUtil.telefone.matcher(texto).matches();
     }
 }

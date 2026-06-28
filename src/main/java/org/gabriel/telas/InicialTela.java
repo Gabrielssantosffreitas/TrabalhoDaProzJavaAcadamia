@@ -1,5 +1,6 @@
 package org.gabriel.telas;
 
+import org.gabriel.telas.adiministrador.LoginAdiministrador;
 import org.gabriel.telas.utilidades.ClearUtil;
 import org.gabriel.telas.utilidades.ColoresUtil;
 

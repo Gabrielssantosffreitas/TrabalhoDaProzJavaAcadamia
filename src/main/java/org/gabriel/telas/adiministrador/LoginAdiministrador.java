@@ -1,4 +1,4 @@
-package org.gabriel.telas;
+package org.gabriel.telas.adiministrador;
 
 import org.gabriel.repositorio.AdiministradorCRUDRepositorio;
 import org.gabriel.servicos.LoginAdiministradorServicos;
@@ -22,7 +22,14 @@ public class LoginAdiministrador {
 
         try {
             loginAdiministradorServicos.Logar(cpf,senha);
-            ColoresUtil.printGreen("logado");
+            ClearUtil.LimparTerminal(0);
+
+            AcessoAdiministradorTela.exibir(s);
+
+
+
+
+
         } catch (Exception e) {
             ColoresUtil.printRed(e.getMessage() +"/n"+ e.getCause() );
         }

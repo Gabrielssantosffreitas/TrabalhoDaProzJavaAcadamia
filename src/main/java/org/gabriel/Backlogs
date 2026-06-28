@@ -5,3 +5,7 @@ EU como Adiministrador quero Logar
  criar controle de login
  criar a tela de login
  criar a tela inicial
+Eu como adiministrador quero adiconar outros adiministrador;
+ criar o servico de adicionar adiministrador
+ criar a tela de adiconar adiministrador
+
