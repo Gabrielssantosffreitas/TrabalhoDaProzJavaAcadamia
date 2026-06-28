@@ -1,9 +1,7 @@
 package org.gabriel.telas.adiministrador;
 
-import org.gabriel.telas.adiministrador.CadatroDeAdiministradorParaAdiministradorTela;
-import org.gabriel.telas.adiministrador.CadastrarAlunoParaAdiministradorTela;
-import org.gabriel.telas.adiministrador.CadastrarProfessorParaAdiministradorTela;
-import org.gabriel.telas.utilidades.ClearUtil;
+import org.gabriel.telas.ListarAlunoPorCpfTela;
+import org.gabriel.telas.ListarAlunosTela;
 import org.gabriel.telas.utilidades.ColoresUtil;
 
 import java.security.NoSuchAlgorithmException;
@@ -33,7 +31,8 @@ public class AcessoAdiministradorTela {
                 case 1 -> CadatroDeAdiministradorParaAdiministradorTela.exibir(scanner);
                 case 2 -> CadastrarProfessorParaAdiministradorTela.exibir(scanner);
                 case 3 -> CadastrarAlunoParaAdiministradorTela.exibir(scanner);
-                case 4 -> ClearUtil.LimparTerminal(0);
+                case 4 -> ListarAlunosTela.exibir();
+                case 5 -> ListarAlunoPorCpfTela.exibir(scanner);
             }
 
         }while (opc!=10);

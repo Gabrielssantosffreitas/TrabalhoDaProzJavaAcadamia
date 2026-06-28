@@ -1,7 +1,9 @@
 package org.gabriel.modelos;
 
 import lombok.Getter;
+import lombok.ToString;
 
+@ToString
 public class ProfessorModelo extends PessoaModelo {
     @Getter
     private int id;

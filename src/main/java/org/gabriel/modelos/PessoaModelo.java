@@ -8,13 +8,13 @@ import lombok.*;
 @ToString
 public  class PessoaModelo {
     @Getter
-    private  String nome;
+    protected   String nome;
     @Getter
-    private  String cpf;
+    protected   String cpf;
     @Getter @Setter
-    private  String telefone;
+    protected   String telefone;
     @Setter @Getter
-    private  String email;
+    protected   String email;
     @Setter @Getter
-    private  String senha;
+    protected   String senha;
 }

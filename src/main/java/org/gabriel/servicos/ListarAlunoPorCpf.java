@@ -1,17 +1,16 @@
 package org.gabriel.servicos;
 
+import lombok.AllArgsConstructor;
 import org.gabriel.modelos.AlunoModelo;
 import org.gabriel.repositorio.AlunoCRUDRepositorio;
-
-import lombok.AllArgsConstructor;
 
 import java.util.List;
 
 @AllArgsConstructor
-public class ListarTodosOSAlunosService {
+public class ListarAlunoPorCpf {
     private AlunoCRUDRepositorio alunoCRUDRepositorio;
 
-   public List<AlunoModelo> listar (){
-       return alunoCRUDRepositorio.selecionar();
-   }
+    public AlunoModelo listar (String cpf){
+        return alunoCRUDRepositorio.selecionarPorCpf(cpf);
+    }
 }
