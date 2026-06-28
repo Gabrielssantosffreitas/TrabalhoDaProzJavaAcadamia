@@ -1,6 +1,8 @@
 package org.gabriel.telas.adiministrador;
 
-import org.gabriel.servicos.CadastraAdiministradorServico;
+import org.gabriel.telas.adiministrador.CadatroDeAdiministradorParaAdiministradorTela;
+import org.gabriel.telas.adiministrador.CadastrarAlunoParaAdiministradorTela;
+import org.gabriel.telas.adiministrador.CadastrarProfessorParaAdiministradorTela;
 import org.gabriel.telas.utilidades.ClearUtil;
 import org.gabriel.telas.utilidades.ColoresUtil;
 
@@ -13,8 +15,8 @@ public class AcessoAdiministradorTela {
         do {
             ColoresUtil.printYellow("==============Bem vindo a pagina do adiministrado==============");
             ColoresUtil.printBlue("1 - Cadastrar novo Adiministrador ");
-            ColoresUtil.printCyan("2 - Cadastrar novo Funcionario");
-            ColoresUtil.printBlue("2 - Cadastrar novo Aluno");
+            ColoresUtil.printCyan("2 - Cadastrar novo Professor");
+            ColoresUtil.printBlue("3 - Cadastrar novo Aluno");
             ColoresUtil.printBlue("4 - Sair");
 
             opc = scanner.nextByte();
@@ -22,7 +24,7 @@ public class AcessoAdiministradorTela {
 
             switch (opc){
                 case 1 -> CadatroDeAdiministradorParaAdiministradorTela.exibir(scanner);
-                case 2 -> ColoresUtil.printRed("Em densenvolvimento");
+                case 2 -> CadastrarProfessorParaAdiministradorTela.exibir(scanner);
                 case 3 -> CadastrarAlunoParaAdiministradorTela.exibir(scanner);
                 case 4 -> ClearUtil.LimparTerminal(0);
             }
