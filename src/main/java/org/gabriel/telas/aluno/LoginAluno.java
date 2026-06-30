@@ -1,4 +1,4 @@
-package org.gabriel.telas.adiministrador;
+package org.gabriel.telas.aluno;
 
 import org.gabriel.repositorio.AlunoCRUDRepositorio;
 import org.gabriel.servicos.LoginAlunoServicos;

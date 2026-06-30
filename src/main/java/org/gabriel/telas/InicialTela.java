@@ -1,8 +1,8 @@
 package org.gabriel.telas;
 
 import org.gabriel.telas.adiministrador.LoginAdiministrador;
-import org.gabriel.telas.adiministrador.LoginAluno;
-import org.gabriel.telas.adiministrador.LoginProfessor;
+import org.gabriel.telas.aluno.LoginAluno;
+import org.gabriel.telas.professor.LoginProfessor;
 import org.gabriel.telas.utilidades.ClearUtil;
 import org.gabriel.telas.utilidades.ColoresUtil;
 
