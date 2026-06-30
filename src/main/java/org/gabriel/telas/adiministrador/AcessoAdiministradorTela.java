@@ -2,6 +2,10 @@ package org.gabriel.telas.adiministrador;
 
 import org.gabriel.telas.ListarAlunoPorCpfTela;
 import org.gabriel.telas.ListarAlunosTela;
+import org.gabriel.telas.ListarProfessoresTela;
+import org.gabriel.telas.ListarProfessorPorCpfTela;
+import org.gabriel.telas.ListarAdministradoresTela;
+import org.gabriel.telas.ListarAdministradorPorCpfTela;
 import org.gabriel.telas.utilidades.ColoresUtil;
 
 import java.security.NoSuchAlgorithmException;
@@ -33,6 +37,10 @@ public class AcessoAdiministradorTela {
                 case 3 -> CadastrarAlunoParaAdiministradorTela.exibir(scanner);
                 case 4 -> ListarAlunosTela.exibir();
                 case 5 -> ListarAlunoPorCpfTela.exibir(scanner);
+                case 6 -> ListarProfessoresTela.exibir();
+                case 7 -> ListarProfessorPorCpfTela.exibir(scanner);
+                case 8 -> ListarAdministradoresTela.exibir();
+                case 9 -> ListarAdministradorPorCpfTela.exibir(scanner);
             }
 
         }while (opc!=10);

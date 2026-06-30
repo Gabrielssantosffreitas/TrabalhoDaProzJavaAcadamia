@@ -1,9 +1,9 @@
 package org.gabriel.modelos;
 
 import lombok.Getter;
-import lombok.ToString;
 
-@ToString
+
+
 public class ProfessorModelo extends PessoaModelo {
     @Getter
     private int id;
@@ -15,5 +15,10 @@ public class ProfessorModelo extends PessoaModelo {
 
     public ProfessorModelo(String nome, String cpf, String telefone, String email, String senha) {
         super(nome, cpf, telefone, email, senha);
+    }
+
+    @Override
+    public String toString() {
+        return "ProfessorModelo [id=" + id + ", " + super.toString() + "]";
     }
 }
