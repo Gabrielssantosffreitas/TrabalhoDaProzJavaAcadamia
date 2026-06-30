@@ -1,6 +1,8 @@
 package org.gabriel.telas;
 
 import org.gabriel.telas.adiministrador.LoginAdiministrador;
+import org.gabriel.telas.adiministrador.LoginAluno;
+import org.gabriel.telas.adiministrador.LoginProfessor;
 import org.gabriel.telas.utilidades.ClearUtil;
 import org.gabriel.telas.utilidades.ColoresUtil;
 
@@ -26,8 +28,8 @@ public class InicialTela {
 
             switch (opc){
                 case 1 -> LoginAdiministrador.exibir(s);
-                case 2 -> LoginAdiministrador.exibir(s);
-                case 3 -> LoginAdiministrador.exibir(s);
+                case 2 -> LoginAluno.exibir(s);
+                case 3 -> LoginProfessor.exibir(s);
                 case 4 -> ColoresUtil.printRed("Saindo");
                 default -> ColoresUtil.printRed("opcao invalida");
             }
