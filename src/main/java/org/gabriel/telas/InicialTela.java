@@ -27,11 +27,21 @@ public class InicialTela {
             opc = s.nextByte();
 
             switch (opc){
-                case 1 -> LoginAdiministrador.exibir(s);
-                case 2 -> LoginAluno.exibir(s);
-                case 3 -> LoginProfessor.exibir(s);
-                case 4 -> ColoresUtil.printRed("Saindo");
-                default -> ColoresUtil.printRed("opcao invalida");
+                case 1:
+                    LoginAdiministrador.exibir(s);
+                    break;
+                case 2:
+                    LoginAluno.exibir(s);
+                    break;
+                case 3:
+                    LoginProfessor.exibir(s);
+                    break;
+                case 4:
+                    ColoresUtil.printRed("Saindo");
+                    break;
+                default:
+                    ColoresUtil.printRed("opcao invalida");
+                    break;
             }
 
         }while (opc!=4);

@@ -9,11 +9,11 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ExercicioCRUDRepositorio {
+public class ExercicioCRUDrepositorio {
 
     // CREATE
     public void criar(ExercicioModelo exercicio) {
-        String sql = "INSERT INTO exercicio (plano_id, nome, series, repeticoes) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO EXERCICO (plano_id, nome, series, repeticoes) VALUES (?, ?, ?, ?)";
 
         try (Connection conn = ConexaoRepositorio.connection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -31,9 +31,9 @@ public class ExercicioCRUDRepositorio {
     }
 
     // SELECT POR ID
-    public ExercicioModelo selecionarPorId(int id) {
-        String sql = "SELECT * FROM exercicio WHERE id = ?";
-        ExercicioModelo exercicio = null;
+    public List<ExercicioModelo> selecionarPorId(int id) {
+        String sql = "SELECT * FROM EXERCICO WHERE id = ?";
+       List<ExercicioModelo> exercicio = new LinkedList<>();
 
         try (Connection conn = ConexaoRepositorio.connection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -41,13 +41,13 @@ public class ExercicioCRUDRepositorio {
             ps.setInt(1, id);
 
             try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) {
-                    exercicio = new ExercicioModelo(
+                while (rs.next()) {
+                    exercicio.add(new ExercicioModelo(
                             rs.getInt("id"),
                             rs.getInt("plano_id"),
                             rs.getString("nome"),
                             rs.getInt("series"),
-                            rs.getInt("repeticoes")
+                            rs.getInt("repeticoes"))
                     );
                 }
             }
@@ -63,7 +63,7 @@ public class ExercicioCRUDRepositorio {
     public List<ExercicioModelo> selecionarPorAluno(int alunoId) {
         String sql =
                 "SELECT e.* " +
-                "FROM exercicio e " +
+                "FROM EXERCICO e " +
                 "INNER JOIN plano_de_treino p ON e.plano_id = p.id " +
                 "WHERE p.aluno_id = ?";
 
@@ -95,7 +95,7 @@ public class ExercicioCRUDRepositorio {
 
     // UPDATE
     public void atualizar(ExercicioModelo exercicio) {
-        String sql = "UPDATE exercicio SET nome=?, series=?, repeticoes=? WHERE id=?";
+        String sql = "UPDATE EXERCICO SET nome=?, series=?, repeticoes=? WHERE id=?";
 
         try (Connection conn = ConexaoRepositorio.connection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -114,7 +114,7 @@ public class ExercicioCRUDRepositorio {
 
     // DELETE
     public void deletar(int id) {
-        String sql = "DELETE FROM exercicio WHERE id = ?";
+        String sql = "DELETE FROM EXERCICO WHERE id = ?";
 
         try (Connection conn = ConexaoRepositorio.connection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
